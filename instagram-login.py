@@ -1,5 +1,4 @@
 import requests,json
-from bs4 import BeautifulSoup
 import requests
 us = input('ENTER YOUR USERNAME :')
 pw = input('ENTER YOUR PASSWORD  :')
