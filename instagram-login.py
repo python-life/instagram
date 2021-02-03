@@ -27,10 +27,12 @@ data = {
     'username':us,
     'enc_password':'#PWD_INSTAGRAM_BROWSER:0:&:'+pw
 }
-r = requests.post(loginurl,data=data,headers=login).text
-if 'userId' in r:
-    print(f'welcome user > {us}')
-elif 'message' in r:
-    print('Please wait a few minutes before you try again')
-else:
-    print('username not found or wrong password ')
+ r = requests.post(url, data=data, headers=login).text
+    if 'userId' in r :
+        print('welcome ',us)
+        break
+    elif  "false" in r:
+        print('worng password !')
+    else:
+        if 'message' in r :
+            print('Please wait a few minutes before you try again')
